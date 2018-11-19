@@ -12,14 +12,14 @@ public class Newsletter extends Publication {
     private String owner;
 
     // No-arg constructor
-    public Magazine() {
+    public Newsletter() {
         setPublicationFrequency("");
         setEditor("");
         setOwner("");
     }
 
     // Constructor with args
-    public Magazine(String publicationFrequency, String editor, String owner) {
+    public Newsletter(String publicationFrequency, String editor, String owner) {
         this.publicationFrequency = publicationFrequency;
         this.editor = editor;
         this.owner = owner;
@@ -49,5 +49,19 @@ public class Newsletter extends Publication {
     public void setOwner(String owner) {
         this.owner = owner;
     }
+
+    public String toString()
+	{
+        StringBuffer strBuf = new StringBuffer(super.toString());
+		strBuf.append("\nPublication Frequency : " );
+		strBuf.append(publicationFrequency);
+		strBuf.append("\nEditor                : " );
+		strBuf.append(editor);
+		strBuf.append("\nOwner                 : ") ;
+        strBuf.append(owner);
+
+        return strBuf.toString() ;
+
+	}
 
 }

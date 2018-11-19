@@ -60,4 +60,20 @@ public abstract class Publication {
     public void setSubject(String subject) {
         this.subject = subject;
     }
+
+    @Override
+    public String toString() {
+        StringBuffer strBuf = new StringBuffer("\nPublication data: \n") ;
+        strBuf.append("\nTitle              : " ); 
+        strBuf.append(title);
+        strBuf.append("\nPublisher          : " );
+        strBuf.append(publisher); 
+        strBuf.append("\nPublication Date   : "); 
+        strBuf.append(publicationDate);
+        strBuf.append("\nSubject            : ");
+        strBuf.append(subject); 
+        strBuf.append("\n");
+
+        return strBuf.toString();
+    }
 }

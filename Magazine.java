@@ -39,4 +39,17 @@ public class Magazine extends Publication {
         this.editor = editor;
     }
 
+    public String toString()
+	{
+        StringBuffer strBuf = new StringBuffer(super.toString());
+		strBuf.append("\nPublication Frequency : " );
+		strBuf.append(publicationFrequency);
+		strBuf.append("\nEditor                : " );
+		strBuf.append(editor);
+		strBuf.append( "\n") ;
+ 
+    		return strBuf.toString() ;
+
+    }
+    
 }

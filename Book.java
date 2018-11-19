@@ -83,4 +83,25 @@ public class Book extends Publication {
     public void setEdition(int edition) {
         this.edition = edition;
     }
+
+    @Override
+    public String toString() {
+        StringBuffer strBuf = new StringBuffer(super.toString());
+		strBuf.append("\nISBN                        : ");
+		strBuf.append(isbn);
+		strBuf.append("\nLibrary of Congress Number  : ");
+		strBuf.append(libraryOfCongressNumber);
+        strBuf.append("\nAuthor                      : ");
+        strBuf.append(author);
+        strBuf.append("\nNumber of Pages             : ");
+        strBuf.append(numberOfPages);
+        strBuf.append("\nCopyright Year              : ");
+        strBuf.append(copyrightYear);
+        strBuf.append("\nEdition                     : ");
+        strBuf.append(edition);
+ 
+    	return strBuf.toString() ;
+
+	}
+
 }
